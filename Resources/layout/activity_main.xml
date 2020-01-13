@@ -6,7 +6,17 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp">
-    <TextView
+
+    <ScrollView
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
         android:text="Input Values Accordingly"
         android:textSize="22sp"
         android:textStyle="bold"
@@ -14,7 +24,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="40dp"
         android:id="@+id/textView1" />
 
     <android.support.design.widget.TextInputLayout
@@ -74,7 +84,7 @@
         android:layout_marginLeft="20dp"
         android:hint="Savings Rate (%)"
         android:inputType="number"
-        android:imeOptions="actionNext"
+        android:imeOptions="actionDone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
@@ -89,5 +99,10 @@
         android:layout_width="300dp"
         android:layout_height="50dp"/>
 
+
+        </LinearLayout>
+
+    </ScrollView>
+    
 
 </LinearLayout>
