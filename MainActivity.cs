@@ -45,7 +45,8 @@ namespace Income_Planner
             spendableIncomeTextView = (TextView)FindViewById(Resource.Id.spendableIncomeTextView);
 
             calculateButton = (Button)FindViewById(Resource.Id.calculateButton);
-            //resultLayout = (RelativeLayout)FindViewById(Resource.Id.res);
+            resultLayout = (RelativeLayout)FindViewById(Resource.Id.resultLayout);
+
         }
 
     }

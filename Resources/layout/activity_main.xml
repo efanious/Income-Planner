@@ -108,13 +108,13 @@
                 android:layout_height="50dp"/>
 
             <RelativeLayout
+                android:id="@+id/resultLayout"
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="30dp"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/resultLayout">
+                android:layout_height="match_parent">
 
                 <TextView
                     android:id="@+id/workSummaryTitle"
