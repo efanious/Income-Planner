@@ -23,6 +23,8 @@ namespace Income_Planner
 
         Button calculateButton;
         RelativeLayout resultLayout;
+
+        bool inputCalculated = false;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -75,7 +77,20 @@ namespace Income_Planner
 
             resultLayout.Visibility = Android.Views.ViewStates.Visible;
 
+            inputCalculated = true;
+            calculateButton.Text = "Clear";
+
             
+        }
+
+        void ClearInput()
+        {
+            incomePerHourEditText.Text = "";
+            workHourPerDayEditText.Text = "";
+            taxRateEditText.Text = "";
+            savingRateEditText.Text = "";
+
+            resultLayout.Visibility = Android.Views.ViewStates.Invisible;
         }
     }
 }
