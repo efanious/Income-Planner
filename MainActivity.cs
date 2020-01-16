@@ -67,13 +67,15 @@ namespace Income_Planner
             double spendableIncome = annualIncome - annualSavings - taxPayable;
 
             // Display results of the calculation
-            grossIncomeTextView.Text = annualIncome.ToString() + " USD";
-            workSummaryTextView.Text = annualWorkHourSummary.ToString() + " HRS";
-            taxPayableTextView.Text = taxPayable.ToString() + " USD";
-            annualSavingsTextView.Text = annualSavings.ToString() + " USD";
-            spendableIncomeTextView.Text = spendableIncome.ToString() + " USD";
+            grossIncomeTextView.Text = annualIncome.ToString("#,##") + " USD";
+            workSummaryTextView.Text = annualWorkHourSummary.ToString("#,##") + " HRS";
+            taxPayableTextView.Text = taxPayable.ToString("#,##") + " USD";
+            annualSavingsTextView.Text = annualSavings.ToString("#,##") + " USD";
+            spendableIncomeTextView.Text = spendableIncome.ToString("#,##") + " USD";
 
             resultLayout.Visibility = Android.Views.ViewStates.Visible;
+
+            
         }
     }
 }
