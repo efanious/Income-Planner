@@ -28,6 +28,7 @@ namespace Income_Planner
             base.OnCreate(savedInstanceState);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
+            ConnectViews();
         }
         
 
@@ -47,7 +48,32 @@ namespace Income_Planner
             calculateButton = (Button)FindViewById(Resource.Id.calculateButton);
             resultLayout = (RelativeLayout)FindViewById(Resource.Id.resultLayout);
 
+            calculateButton.Click += CalculateButton_Click;
+
         }
 
+        private void CalculateButton_Click(object sender, System.EventArgs e)
+        {
+            //Take inputs from user
+            double incomePerHour = double.Parse(incomePerHourEditText.Text);
+            double workHourPerDay = double.Parse(workHourPerDayEditText.Text);
+            double taxRate = double.Parse(taxRateEditText.Text);
+            double savingsRate = double.Parse(savingRateEditText.Text);
+
+            double annualWorkHourSummary = workHourPerDay * 5 * 50;
+            double annualIncome = incomePerHour * workHourPerDay * 5 * 50;
+            double taxPayable = (taxRate / 100) * annualIncome;
+            double annualSavings = (savingsRate / 100) * annualIncome;
+            double spendableIncome = annualIncome - annualSavings - taxPayable;
+
+            // Display results of the calculation
+            grossIncomeTextView.Text = annualIncome.ToString() + " USD";
+            workSummaryTextView.Text = annualWorkHourSummary.ToString() + " HRS";
+            taxPayableTextView.Text = taxPayable.ToString() + " USD";
+            annualSavingsTextView.Text = annualSavings.ToString() + " USD";
+            spendableIncomeTextView.Text = spendableIncome.ToString() + " USD";
+
+            resultLayout.Visibility = Android.Views.ViewStates.Visible;
+        }
     }
 }
