@@ -56,6 +56,15 @@ namespace Income_Planner
 
         private void CalculateButton_Click(object sender, System.EventArgs e)
         {
+
+            if(inputCalculated)
+            {
+                inputCalculated = false;
+                calculateButton.Text = "Calculate";
+                ClearInput();
+                return;
+            }
+
             //Take inputs from user
             double incomePerHour = double.Parse(incomePerHourEditText.Text);
             double workHourPerDay = double.Parse(workHourPerDayEditText.Text);
