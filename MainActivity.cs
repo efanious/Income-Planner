@@ -43,6 +43,10 @@ namespace Income_Planner
             taxPayableTextView = (TextView)FindViewById(Resource.Id.annualTaxPayableTextView);
             annualSavingsTextView = (TextView)FindViewById(Resource.Id.annualSavingsTextView);
             spendableIncomeTextView = (TextView)FindViewById(Resource.Id.spendableIncomeTextView);
+
+            calculateButton = (Button)FindViewById(Resource.Id.calculateButton);
+            //resultLayout = (RelativeLayout)FindViewById(Resource.Id.res);
         }
+
     }
 }

@@ -3584,7 +3584,7 @@ namespace Income_Planner
 			public const int radio = 2131230843;
 			
 			// aapt resource value: 0x7F08007C
-			public const int relativeLayout2 = 2131230844;
+			public const int resultLayout = 2131230844;
 			
 			// aapt resource value: 0x7F08007D
 			public const int right = 2131230845;

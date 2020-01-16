@@ -114,7 +114,7 @@
                 android:paddingRight="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/relativeLayout2">
+                android:id="@+id/resultLayout">
 
                 <TextView
                     android:id="@+id/workSummaryTitle"
